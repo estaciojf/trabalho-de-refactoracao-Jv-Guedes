@@ -2,67 +2,67 @@ package Models;
 
 public class Livro {
 	
-	private String title;
-	private String author;
-	private String gender;
-	private int year;
-	private boolean isRead;
+	private String titulo;
+	private String autor;
+	private String genero;
+	private int ano;
+	private boolean jaLeu;
 
 	
 	public Livro(String title, String author, String gender, int year, boolean isRead) {
-		this.title = title;
-		this.author = author;
-		this.gender = gender;
-		this.year = year;
-		this.isRead = isRead;
+		this.titulo = title;
+		this.autor = author;
+		this.genero = gender;
+		this.ano = year;
+		this.jaLeu = isRead;
 	}
 	
 	public String toString() {
-		return "Titulo: " + this.title + 
-				" Autor: " + this.author + 
-				" Genero: " + this.gender + 
-				" Ano: " + this.year +
-				"Lido: " + this.isRead;
+		return "Titulo: " + this.titulo + 
+				" Autor: " + this.autor + 
+				" Genero: " + this.genero + 
+				" Ano: " + this.ano +
+				"Lido: " + this.jaLeu;
 	}
 
 	public String getTitle() {
-		return title;
+		return titulo;
 	}
 
 	public void setTitle(String title) {
-		this.title = title;
+		this.titulo = title;
 	}
 
 	public String getAuthor() {
-		return author;
+		return autor;
 	}
 
 	public void setAuthor(String author) {
-		this.author = author;
+		this.autor = author;
 	}
 
 	public String getGender() {
-		return gender;
+		return genero;
 	}
 
 	public void setGender(String gender) {
-		this.gender = gender;
+		this.genero = gender;
 	}
 
 	public int getYear() {
-		return year;
+		return ano;
 	}
 
 	public void setYear(int year) {
-		this.year = year;
+		this.ano = year;
 	}
 
 	public boolean isRead() {
-		return isRead;
+		return jaLeu;
 	}
 
 	public void setRead(boolean isRead) {
-		this.isRead = isRead;
+		this.jaLeu = isRead;
 	}
 	
 	

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import Enum.EDataBase;
 
-public abstract class DAO {
+public abstract class DAO { //Classe para Conexão com o SQL
 
 	private static Connection myConn;
 	

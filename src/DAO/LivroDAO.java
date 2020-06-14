@@ -30,7 +30,7 @@ public class LivroDAO extends DAO{
 	
 	public List<Livro> getAllLivros() throws SQLException {
 		
-		List<Livro> list = new ArrayList<>();
+		List<Livro> list = new ArrayList<>(); //Instanciando lista de Livros
 		
 		Statement myStat = null;
 		ResultSet myResult = null;
@@ -47,7 +47,7 @@ public class LivroDAO extends DAO{
 					myResult.getBoolean("isRead")
 					);
 			
-			list.add(tempLivro);
+			list.add(tempLivro); //Adicionando a lista de livros ao tempLivro
 		}
 		
 
@@ -71,8 +71,8 @@ public class LivroDAO extends DAO{
 		Statement myStat = null;
 		ResultSet myResult = null;
 		
-		myStat = DAO.getConnection().createStatement();
-		String query = String.format("UPDATE Livros SET "
+		myStat = DAO.getConnection().createStatement(); //Atualiza os livros no SQL conforme altera no Cadastro
+		String query = String.format("UPDATE Livros SET " 
 				+ "title = '%s', author = '%s', gender= '%s', year = %s, isRead = %b WHERE id = %s", 
 				livro.getTitle(), livro.getAuthor(), livro.getGender(), livro.getYear(), livro.isRead(), id);
 	

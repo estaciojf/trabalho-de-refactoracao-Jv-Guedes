@@ -27,7 +27,7 @@ import java.awt.event.ActionEvent;
 public class ExibirView extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField campoTexto;
 	private JTable table;
 
 	/**
@@ -67,9 +67,9 @@ public class ExibirView extends JFrame {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		panel.add(lblNewLabel);
 		
-		textField = new JTextField();
-		panel.add(textField);
-		textField.setColumns(10);
+		campoTexto = new JTextField();
+		panel.add(campoTexto);
+		campoTexto.setColumns(10);
 		
 		JButton btnBuscar = new JButton("Buscar");
 		panel.add(btnBuscar);

@@ -18,17 +18,17 @@ import Models.Livro;
 public class ExibirController implements ActionListener {
 	
 	private JTable table;
-	public String column[]={"Título","Autor", "Genero", "Ano", "Já Leu?"};  
+	public String column[]={"Título","Autor", "Genero", "Ano", "Já Leu?"}; //nome das colunas a serem exibidas  
 	DefaultTableModel model;
 
-	public ExibirController(JTable table) throws SQLException {
+	public ExibirController(JTable table) throws SQLException { //Construtor da classe
 		this.table = table;
 		this.model = (DefaultTableModel) table.getModel();
 		this.setTableColumns();
 		this.getLivros();
 		
 		
-		TableLivroListener tableListener = new TableLivroListener(table);
+		TableLivroListener tableListener = new TableLivroListener(table); //instanciando tabela TableLivroListener dentro do pacote Listeners
 		
 		table.getModel().addTableModelListener(tableListener);
 	}
@@ -39,7 +39,7 @@ public class ExibirController implements ActionListener {
 		}
 	}
 	
-	public String getLivros() {
+	public String getLivros() { //Pega a lista de atributos do livro
 		
 		this.model.setRowCount(0);
 		

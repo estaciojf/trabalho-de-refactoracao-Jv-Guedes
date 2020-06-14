@@ -18,8 +18,8 @@ import javax.swing.JButton;
 public class CadastroLivroView extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textTitle;
-	private JTextField textAuthor;
+	private JTextField campoTitulo;
+	private JTextField campoAutor;
 
 	/**
 	 * Launch the application.
@@ -64,34 +64,34 @@ public class CadastroLivroView extends JFrame {
 		lblAno.setBounds(266, 140, 61, 16);
 		contentPane.add(lblAno);
 		
-		JCheckBox checkRead = new JCheckBox("Já leu?");
-		checkRead.setBounds(28, 204, 128, 23);
-		contentPane.add(checkRead);
+		JCheckBox jaLeu = new JCheckBox("Já leu?");
+		jaLeu.setBounds(28, 204, 128, 23);
+		contentPane.add(jaLeu);
 		
-		textTitle = new JTextField();
-		textTitle.setBounds(78, 71, 130, 26);
-		contentPane.add(textTitle);
-		textTitle.setColumns(10);
+		campoTitulo = new JTextField();
+		campoTitulo.setBounds(78, 71, 130, 26);
+		contentPane.add(campoTitulo);
+		campoTitulo.setColumns(10);
 		
-		textAuthor = new JTextField();
-		textAuthor.setBounds(78, 135, 130, 26);
-		contentPane.add(textAuthor);
-		textAuthor.setColumns(10);
+		campoAutor = new JTextField();
+		campoAutor.setBounds(78, 135, 130, 26);
+		contentPane.add(campoAutor);
+		campoAutor.setColumns(10);
 		
-		JComboBox comboGender = new JComboBox();
-		comboGender.setBounds(321, 72, 106, 27);
-		contentPane.add(comboGender);
+		JComboBox boxGenero = new JComboBox();
+		boxGenero.setBounds(321, 72, 106, 27);
+		contentPane.add(boxGenero);
 		
-		JComboBox comboYear = new JComboBox();
-		comboYear.setBounds(321, 136, 106, 27);
-		contentPane.add(comboYear);
+		JComboBox boxAno = new JComboBox();
+		boxAno.setBounds(321, 136, 106, 27);
+		contentPane.add(boxAno);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.setBounds(270, 215, 117, 29);
 		contentPane.add(btnCadastrar);
 		
 		
-		CadastroLivroController handle = new CadastroLivroController(textTitle, textAuthor, comboGender, comboYear, checkRead);
+		CadastroLivroController handle = new CadastroLivroController(campoTitulo, campoAutor, boxGenero, boxAno, jaLeu);
 		btnCadastrar.addActionListener(handle);
 		
 		
